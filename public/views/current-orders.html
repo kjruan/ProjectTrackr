@@ -1,0 +1,23 @@
+<div class="table-responsive">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th ng-repeat="field in fields">
+	      {{ field }}
+	      </th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="tran in transactions">
+	      <td>{{ tran.strategy }}</td>
+	      <td>{{ tran.basispoints | percentage:2 }}</td>
+	      <td>{{ tran.tradevalue | currency }}</td>
+	      <td>{{ tran.shares | number }}</td>
+	      <td>{{ tran.tradepct | percentage:2 }}</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<div class="col-xs-12">
+	  <p><a class="btn btn-default pull-right" href="#" role="button">Commit</a></p>
+	</div>
+</div>
